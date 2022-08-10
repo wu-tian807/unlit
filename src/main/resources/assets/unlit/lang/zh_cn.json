@@ -1,0 +1,16 @@
+{
+  "block.unlit.standing_torch" : "熄灭的火把",
+  "item.unlit.lit_torch": "点燃的火把",
+  "tooltips.fire_starter.help": "有几率失败",
+  "item.unlit.fire_starter": "打火器",
+  "item.unlit.coal_dust": "煤炭粉",
+  "item.unlit.fat": "动物脂肪",
+  "item.unlit.fat_drum": "脂桶",
+  "item.unlit.fat_drum_filled": "脂桶",
+  "block.unlit.lantern": "熄灭的灯笼",
+  "item.unlit.lit_lantern": "点燃的灯笼",
+  "item.unlit.matchbox": "火柴盒",
+  "item.unlit.glowstone_crystal": "萤炭晶体",
+  "item.unlit.glowstone_paste": "萤石黏土",
+  "block.unlit.jack_o_lantern": "点燃的南瓜灯"
+}

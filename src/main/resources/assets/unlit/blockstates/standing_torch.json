@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "lit_state=2": { "model": "unlit:block/standing_torch_lit" },
+    "lit_state=1": { "model": "unlit:block/standing_torch_smoldering"},
+    "lit_state=0": { "model": "unlit:block/standing_torch_unlit"}
+  }
+}

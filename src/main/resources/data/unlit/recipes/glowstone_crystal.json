@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": [
+      {
+        "item": "minecraft:glowstone_dust"
+      }
+    ],
+    "#":[
+      {
+        "item": "minecraft:coal"
+      },
+      {
+        "item": "minecraft:charcoal"
+      }
+    ]
+  },
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "result": {
+    "count": 1,
+    "item": "unlit:glowstone_crystal"
+  }
+}

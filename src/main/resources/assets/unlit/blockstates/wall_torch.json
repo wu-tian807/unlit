@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "facing=east,lit_state=2": { "model": "unlit:block/wall_torch_lit" },
+    "facing=east,lit_state=1": { "model": "unlit:block/wall_torch_smoldering"},
+    "facing=east,lit_state=0": { "model": "unlit:block/wall_torch_unlit"},
+    "facing=south,lit_state=2": { "model": "unlit:block/wall_torch_lit", "y": 90 },
+    "facing=south,lit_state=1": { "model": "unlit:block/wall_torch_smoldering", "y": 90 },
+    "facing=south,lit_state=0": { "model": "unlit:block/wall_torch_unlit", "y": 90 },
+    "facing=west,lit_state=2": { "model": "unlit:block/wall_torch_lit", "y": 180 },
+    "facing=west,lit_state=1": { "model": "unlit:block/wall_torch_smoldering", "y": 180 },
+    "facing=west,lit_state=0": { "model": "unlit:block/wall_torch_unlit", "y": 180 },
+    "facing=north,lit_state=2": { "model": "unlit:block/wall_torch_lit", "y": 270 },
+    "facing=north,lit_state=1": { "model": "unlit:block/wall_torch_smoldering", "y": 270 },
+    "facing=north,lit_state=0": { "model": "unlit:block/wall_torch_unlit", "y": 270 }
+  }
+}

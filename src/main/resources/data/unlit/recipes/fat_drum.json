@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": [
+      {
+        "item": "minecraft:iron_ingot"
+      }
+    ]
+  },
+  "pattern": [
+    "XX ",
+    "X X",
+    "XXX"
+  ],
+  "result": {
+    "count": 1,
+    "item": "unlit:fat_drum"
+  }
+}

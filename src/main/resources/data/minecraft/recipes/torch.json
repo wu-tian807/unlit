@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "!": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "X": [
+      {
+        "item": "unlit:glowstone_crystal"
+      }
+      {
+        "item": "unlit:glowstone_paste"
+      }
+    ]
+  },
+  "pattern": [
+    "X",
+    "!"
+  ],
+  "result": {
+    "count": 1,
+    "item": "minecraft:torch"
+  }
+}

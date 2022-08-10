@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "!": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "X": [
+      {
+        "item": "unlit:dust_coal"
+      }
+    ]
+  },
+  "pattern": [
+    "X",
+    "!"
+  ],
+  "result": {
+    "count": 1,
+    "item": "unlit:unlit_torch"
+  }
+}

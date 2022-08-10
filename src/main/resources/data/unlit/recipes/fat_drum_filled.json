@@ -1,0 +1,15 @@
+{
+  "type": "unlit:fat_drum",
+  "ingredients":[
+    {
+      "item": "unlit:fat"
+    },
+    {
+      "item": "unlit:fat_drum"
+    }
+  ],
+  "result": {
+    "item": "unlit:fat_drum"
+  },
+  "fat": 1
+}

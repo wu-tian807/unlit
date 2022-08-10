@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "lit_state=1,facing=east": {
+      "model": "minecraft:block/jack_o_lantern",
+      "y": 90
+    },
+    "lit_state=1,facing=north": {
+      "model": "minecraft:block/jack_o_lantern"
+    },
+    "lit_state=1,facing=south": {
+      "model": "minecraft:block/jack_o_lantern",
+      "y": 180
+    },
+    "lit_state=1,facing=west": {
+      "model": "minecraft:block/jack_o_lantern",
+      "y": 270
+    },
+    "lit_state=0,facing=east": {
+      "model": "minecraft:block/carved_pumpkin",
+      "y": 90
+    },
+    "lit_state=0,facing=north": {
+      "model": "minecraft:block/carved_pumpkin"
+    },
+    "lit_state=0,facing=south": {
+      "model": "minecraft:block/carved_pumpkin",
+      "y": 180
+    },
+    "lit_state=0,facing=west": {
+      "model": "minecraft:block/carved_pumpkin",
+      "y": 270
+    }
+  }
+}

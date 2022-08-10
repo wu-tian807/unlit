@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "X": [
+      {
+        "item": "minecraft:stick"
+      }
+    ],
+    "*": [
+      {
+        "item": "minecraft:gunpowder"
+      }
+    ],
+    "!": [
+      {
+        "item": "minecraft:paper"
+      }
+    ]
+  },
+  "pattern": [
+    "XXX",
+    "!*!",
+    "!!!"
+  ],
+  "result": {
+    "count": 4,
+    "item": "unlit:matchbox"
+  }
+}

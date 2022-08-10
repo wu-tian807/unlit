@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "hanging=false,lit_state=1": {
+      "model": "minecraft:block/lantern"
+    },
+    "hanging=false,lit_state=0": {
+      "model": "unlit:block/unlit_lantern"
+    },
+    "hanging=true,lit_state=1": {
+      "model": "minecraft:block/lantern_hanging"
+    },
+    "hanging=true,lit_state=0": {
+      "model": "unlit:block/unlit_hanging_lantern"
+    }
+  }
+}

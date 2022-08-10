@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "H": {
+      "item": "minecraft:honeycomb"
+    },
+    "S": {
+      "item": "minecraft:string"
+    },
+    "#": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "pattern": [
+    "#",
+    "S",
+    "H"
+  ],
+  "result": {
+    "item": "minecraft:candle"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "block.unlit.standing_torch" : "Unlit Torch",
+  "item.unlit.lit_torch": "lit Torch",
+  "tooltips.fire_starter.help": "Chance to fail",
+  "item.unlit.fire_starter": "Fire Starter",
+  "item.unlit.coal_dust": "Coal Dust",
+  "item.unlit.fat": "Animal Fat",
+  "item.unlit.fat_drum": "Fat Drum",
+  "item.unlit.fat_drum_filled": "Fat Drum",
+  "block.unlit.lantern": "Unlit Lantern",
+  "item.unlit.lit_lantern": "Lit Lantern",
+  "item.unlit.matchbox": "Matchbox",
+  "item.unlit.glowstone_crystal": "Glowstone Crystal",
+  "item.unlit.glowstone_paste": "Glowstone Paste",
+  "block.unlit.jack_o_lantern": "Lit Jack o'Lantern"
+}

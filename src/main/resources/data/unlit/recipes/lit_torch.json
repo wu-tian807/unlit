@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "unlit:unlit_torch"
+    },
+    {
+      "item": "unlit:matchbox"
+    }
+  ],
+  "result": {
+    "item": "unlit:lit_torch"
+  }
+}
