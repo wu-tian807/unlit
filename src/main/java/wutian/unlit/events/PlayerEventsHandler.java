@@ -46,7 +46,7 @@ public class PlayerEventsHandler {
 
     public static final ItemStack[] stacks = new ItemStack[37];
 
-    public static final int TICK_INTERVAL = 1200*3;
+    public static final int TICK_INTERVAL = 20;
 
     public static final int INITIAL_BURN_TIME = ConfigHandler.torchBurnoutTime.get();
 
@@ -110,6 +110,7 @@ public class PlayerEventsHandler {
         if(!ConfigHandler.hardcore.get() || event.player.getLevel().isClientSide()) return;
         if(waitTime <= TICK_INTERVAL)
         {
+            LogUtils.getLogger().debug(String.valueOf(waitTime) + "   WaitTime");
             waitTime++;
             return;
         }
@@ -143,7 +144,7 @@ public class PlayerEventsHandler {
                     changeItem(player,pStack,ItemStackAPI.replaceItemWithCopyNBTTagAndCountButResetBurnTime(pStack, ModItems.UNLIT_LANTERN.get(),0),0);
             }
         }
-        else if(player.getOffhandItem().getItem() instanceof LitLantern)
+        else if(player.getOffhandItem().getItem() instanceof LitTorchItem)
         {
             ItemStack pStack = player.getOffhandItem();
             int burnTime;
@@ -316,6 +317,7 @@ public class PlayerEventsHandler {
 
     public static void torchChangeOnBlockEntity(TickEvent.PlayerTickEvent event)
     {
+        if(!ConfigHandler.hardcore.get() || event.player.getLevel().isClientSide()) return;
         ChunkAccess chunk = event.player.getLevel().getChunk(event.player.getOnPos());
         if(!accesses.contains(chunk)) accesses.add(chunk);
         accesses.forEach((eachChunk) ->{
@@ -354,6 +356,7 @@ public class PlayerEventsHandler {
     }
     public static void torchChangeOnWorld(TickEvent.PlayerTickEvent event)
     {
+        if(!ConfigHandler.hardcore.get() || event.player.getLevel().isClientSide()) return;
         //LogUtils.getLogger().debug(String.valueOf("ab"));
         Player player = event.player;
         List<Entity> entities = player.getLevel().getEntities(null,new AABB(player.getBlockX()-10,player.getBlockY()-10,player.getBlockZ()-10,player.getBlockX()+10,player.getBlockY()+10,player.getBlockZ()+10));

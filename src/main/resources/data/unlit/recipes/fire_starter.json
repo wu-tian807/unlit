@@ -8,22 +8,22 @@
     ],
     "*": [
       {
-        "item": "minecraft:gunpowder"
+        "item": "minecraft:string"
       }
     ],
     "!": [
       {
-        "item": "minecraft:paper"
+        "item": "minecraft:flint"
       }
     ]
   },
   "pattern": [
-    "XXX",
-    "!*!",
-    "!!!"
+    " X ",
+    "*X*",
+    "! !"
   ],
   "result": {
-    "count": 4,
-    "item": "unlit:matchbox"
+    "count": 1,
+    "item": "unlit:fire_starter"
   }
 }
