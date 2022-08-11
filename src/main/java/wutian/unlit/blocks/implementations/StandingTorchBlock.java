@@ -309,6 +309,7 @@ public class StandingTorchBlock extends TorchBlock {
         if(!placeStack.is(ModItems.LIT_TORCH.get())) return state == null ? null:this.defaultBlockState();
         if(placeStack.getOrCreateTag().contains("burnTime"))
         {
+
             int burnTime = placeStack.getTag().getInt("burnTime");
             if(pContext.getLevel().isRainingAt(pContext.getClickedPos().above()))
             {
@@ -325,6 +326,12 @@ public class StandingTorchBlock extends TorchBlock {
                     return state == null ? null:this.defaultBlockState().setValue(BURN_TIME,burnTime).setValue(LIT_STATE,1);
                 }
             }
+            Level level = pContext.getLevel();
+            BlockPos pos = pContext.getClickedPos();
+//            if(state.is(ModBlocks.STANDING_TORCH.get()) && state.getValue(StandingTorchBlock.LIT_STATE) == StandingTorchBlock.LIT &&(burnTime <= StandingTorchBlock.getInitialBurnTime() / 10 || burnTime <=1))
+//            {
+//                state = this.defaultBlockState().setValue(StandingTorchBlock.LIT_STATE,1).setValue(StandingTorchBlock.BURN_TIME,burnTime);
+//            }
             if(burnTime > INITIAL_BURN_TIME)
             {
                 return  state == null ? null:this.defaultBlockState().setValue(BURN_TIME,INITIAL_BURN_TIME).setValue(LIT_STATE,2);

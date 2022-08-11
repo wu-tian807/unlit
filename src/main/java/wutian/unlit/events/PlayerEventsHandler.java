@@ -46,7 +46,7 @@ public class PlayerEventsHandler {
 
     public static final ItemStack[] stacks = new ItemStack[37];
 
-    public static final int TICK_INTERVAL = 20;
+    public static final int TICK_INTERVAL = 2400;
 
     public static final int INITIAL_BURN_TIME = ConfigHandler.torchBurnoutTime.get();
 
@@ -56,12 +56,13 @@ public class PlayerEventsHandler {
         Level level = event.player.getLevel();
         Player player = event.player;
         BlockPos pos = event.player.getOnPos();
-        if(level.isClientSide() || !level.isRaining()) return;
+        if(level.isClientSide()) return;
         if(rainingCheckTime <=20)
         {
             rainingCheckTime++;
             return;
         }
+        LogUtils.getLogger().debug("raining check");
         for (int x=pos.getX() - 16;x< pos.getX() +16;x++)
         {
             for (int y= -64;y<level.getHeight();y++)
@@ -104,20 +105,13 @@ public class PlayerEventsHandler {
     {
         pLevel.setBlockAndUpdate(pPos,ModBlocks.STANDING_TORCH.get().defaultBlockState().setValue(StandingTorchBlock.LIT_STATE,1).setValue(StandingTorchBlock.BURN_TIME,burnTime));
     }
-    @SubscribeEvent
+
     public static void playerInventoryTick(TickEvent.PlayerTickEvent event)
     {
-        if(!ConfigHandler.hardcore.get() || event.player.getLevel().isClientSide()) return;
-        if(waitTime <= TICK_INTERVAL)
-        {
-            LogUtils.getLogger().debug(String.valueOf(waitTime) + "   WaitTime");
-            waitTime++;
-            return;
-        }
         Player player = event.player;
         Level pLevel = event.player.level;
 
-        LogUtils.getLogger().debug(String.valueOf(player.getOffhandItem().getItem() instanceof JackOLanternItem));
+        LogUtils.getLogger().debug(String.valueOf(waitTime) + "   WaitTime");
         if(player.getOffhandItem().getItem() instanceof LitLantern)
         {
             ItemStack pStack = player.getOffhandItem();
@@ -206,7 +200,6 @@ public class PlayerEventsHandler {
             {
                 LogUtils.getLogger().debug("TimeToLantern");
                 ItemStack pStack = player.getInventory().getItem(i);
-                if(!ConfigHandler.hardcore.get() || pLevel.isClientSide()) return;
                 if(!pStack.getOrCreateTag().contains("oil"))
                     pStack.getOrCreateTag().putInt("oil",0);
                 LogUtils.getLogger().debug(String.valueOf(pStack.getOrCreateTag().contains("burnTime")));
@@ -280,7 +273,6 @@ public class PlayerEventsHandler {
                 }
             }
         }
-        waitTime=0;
     }
 
 
@@ -310,9 +302,10 @@ public class PlayerEventsHandler {
             waitTime++;
             return;
         }
+        waitTime=0;
+        playerInventoryTick(event);
         torchChangeOnWorld(event);
         torchChangeOnBlockEntity(event);
-        waitTime=0;
     }
 
     public static void torchChangeOnBlockEntity(TickEvent.PlayerTickEvent event)

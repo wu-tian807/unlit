@@ -1,12 +1,12 @@
 {
   "parent": "unlit:recipes/root",
   "criteria": {
-    "has_coal_dust": {
+    "has_iron_ingot": {
       "conditions": {
         "items": [
           {
             "items": [
-              "unlit:coal_dust"
+              "minecraft:iron_ingot"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_coal_dust",
+      "has_iron_ingot",
       "has_the_recipe"
     ]
   ],
